@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | Todo App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL PLANNER</p>
+        <h1>TaskFlow<span>.</span></h1>
+        <p class="subtitle">Small steps, big achievements.</p>
+      </div>
+      <div class="header-icon">✓</div>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span>Total Tasks</span>
+        <strong id="totalTasks">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>Completed</span>
+        <strong id="completedTasks">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>Remaining</span>
+        <strong id="remainingTasks">0</strong>
+      </div>
+    </section>
+
+    <section class="task-section">
+      <h2>My Tasks</h2>
+      <p class="section-subtitle">What would you like to accomplish today?</p>
+
+      <form id="taskForm" class="task-form">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="e.g. Practice JavaScript..."
+          maxlength="150"
+          autocomplete="off"
+          aria-label="Enter a new task"
+        >
+        <button type="submit" class="add-btn">+ Add Task</button>
+      </form>
+
+      <p id="message" class="message" aria-live="polite"></p>
+
+      <div class="filters">
+        <button type="button" class="filter active" data-filter="all">All</button>
+        <button type="button" class="filter" data-filter="pending">Pending</button>
+        <button type="button" class="filter" data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+
+      <p id="emptyMessage" class="empty-message">
+        No tasks here yet. Add your first task!
+      </p>
+
+      <footer class="task-footer">
+        <span id="taskSummary">0 tasks remaining</span>
+        <button type="button" id="clearCompleted" class="clear-btn">
+          Clear completed
+        </button>
+      </footer>
+    </section>
+
+    <p class="app-footer">Built with HTML, CSS & JavaScript ♥</p>
+  </main>
+
+</body>
+</html>
